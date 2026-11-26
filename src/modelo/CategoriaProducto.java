@@ -8,6 +8,24 @@ package modelo;
  *
  * @author USER
  */
-public class CategoriaProducto {
-    
+
+public enum CategoriaProducto {
+    PLATO("Plato"),
+    BEBIDA("Bebida"),
+    POSTRE("Postre");
+
+    private final String descripcion;
+
+    CategoriaProducto(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    @Override
+    public String toString() {
+        return descripcion;
+    }
 }
